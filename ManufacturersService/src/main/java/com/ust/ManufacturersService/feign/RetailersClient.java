@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name="RetailersService", url="http://localhost:9099/spareparts")
+@FeignClient(name="RetailersService", url="http://localhost:9099/retailers")
 public interface RetailersClient {
     @GetMapping("manufacturers/{mid}")
     List<Retailers> findProductsByMid(@PathVariable("mid") Long mid);

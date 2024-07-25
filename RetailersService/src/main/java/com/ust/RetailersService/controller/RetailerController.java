@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/retailers")
@@ -31,7 +32,7 @@ public class RetailerController {
     public ResponseEntity<FullResponse> findretailersByrid(@PathVariable("rid") Long rid){
         return ResponseEntity.ok(retailersService.findbyrid(rid));
     }
-    @GetMapping("manufacturers/{rid}")
+    @GetMapping("manufacturers/{mid}")
     public ResponseEntity<List<Retailers>> getManufacturersByMid(@PathVariable Long mid) {
         return ResponseEntity.ok(retailersService.getProductsByMid(mid));
     }

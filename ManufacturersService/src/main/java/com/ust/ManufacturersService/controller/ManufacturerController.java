@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/manufacturers")
 @RequiredArgsConstructor
@@ -26,5 +28,9 @@ public class ManufacturerController {
     @GetMapping("/withretailers/{mid}")
     public ResponseEntity<FullResponse> findmanufacturersBymid(@PathVariable("mid") Long mid){
         return ResponseEntity.ok(manufacturersServicee.findbymid(mid));
+    }
+    @GetMapping("rawmaterials/{rmid}")
+    public ResponseEntity<List<Manufacturers>> findProductsByRmid(@PathVariable Long rmid) {
+        return ResponseEntity.ok(manufacturersServicee.getProductsByRMid(rmid));
     }
 }

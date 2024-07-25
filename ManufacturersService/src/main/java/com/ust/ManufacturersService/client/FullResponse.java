@@ -14,5 +14,6 @@ public class FullResponse {
     public String mname;
     public String maddress;
     public String mno;
+    public String rmid;
     public List<Retailers> list;
 }

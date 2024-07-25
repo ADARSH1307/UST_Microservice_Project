@@ -32,12 +32,14 @@ public class ManufacturersService {
         FullResponse res= new FullResponse();
         res.setMid(c.getMid());
         res.setMname(c.getMname());
+        res.setList(list);
         res.setMaddress(c.getMaddress());
         res.setMno(c.getMno());
-        res.setList(list);
-
-
         return res;
 
+    }
+
+    public List<Manufacturers> getProductsByRMid(Long rmid) {
+        return repo.findByRmid(rmid);
     }
 }

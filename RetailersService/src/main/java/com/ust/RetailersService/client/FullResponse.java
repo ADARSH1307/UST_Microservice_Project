@@ -16,6 +16,6 @@ public class FullResponse {
     public String rname;
     public String raddress;
     public String rphone;
-    public String mid;
+    public Long mid;
     public List<SpareParts> parts;
 }

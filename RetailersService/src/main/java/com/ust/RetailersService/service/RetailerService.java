@@ -1,6 +1,5 @@
 package com.ust.RetailersService.service;
 
-import com.netflix.discovery.converters.Auto;
 import com.ust.RetailersService.client.FullResponse;
 import com.ust.RetailersService.client.SpareParts;
 import com.ust.RetailersService.feign.SparePartsClient;
@@ -44,6 +43,6 @@ public class RetailerService {
     }
 
     public List<Retailers> getProductsByMid(Long mid) {
-        return repo.findbyMid(mid);
+        return repo.findByMid(mid);
     }
 }
